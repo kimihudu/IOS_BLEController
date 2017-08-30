@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03FE7C01F5340FC003BD332 /* String+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */; };
+		B03FE7C21F534275003BD332 /* Data+HexJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7C11F534275003BD332 /* Data+HexJoin.swift */; };
+		B03FE7C41F56F194003BD332 /* Main.storyboard_ in Resources */ = {isa = PBXBuildFile; fileRef = B03FE7C31F56F194003BD332 /* Main.storyboard_ */; };
+		B03FE7C61F56F4C0003BD332 /* Main_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03FE7C51F56F4C0003BD332 /* Main_ipad.storyboard */; };
+		B03FE7C81F57009E003BD332 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7C71F57009E003BD332 /* HomeViewController.swift */; };
+		B03FE7CA1F5700DD003BD332 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7C91F5700DD003BD332 /* ActivityViewController.swift */; };
+		B03FE7CC1F5700FE003BD332 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7CB1F5700FE003BD332 /* ProfileViewController.swift */; };
 		B0EC9FB91F4E815300237326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FB81F4E815300237326 /* AppDelegate.swift */; };
 		B0EC9FBB1F4E815300237326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FBA1F4E815300237326 /* ViewController.swift */; };
 		B0EC9FBE1F4E815300237326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EC9FBC1F4E815300237326 /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+HexConverter.swift"; path = "Extensions/String+HexConverter.swift"; sourceTree = "<group>"; };
+		B03FE7C11F534275003BD332 /* Data+HexJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+HexJoin.swift"; path = "Extensions/Data+HexJoin.swift"; sourceTree = "<group>"; };
+		B03FE7C31F56F194003BD332 /* Main.storyboard_ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Main.storyboard_; sourceTree = "<group>"; };
+		B03FE7C51F56F4C0003BD332 /* Main_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_ipad.storyboard; sourceTree = "<group>"; };
+		B03FE7C71F57009E003BD332 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B03FE7C91F5700DD003BD332 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		B03FE7CB1F5700FE003BD332 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B0EC9FB51F4E815300237326 /* BLEController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EC9FB81F4E815300237326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0EC9FBA1F4E815300237326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B03FE7BE1F5340CE003BD332 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */,
+				B03FE7C11F534275003BD332 /* Data+HexJoin.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		B0EC9FAC1F4E815300237326 = {
 			isa = PBXGroup;
 			children = (
+				B03FE7BE1F5340CE003BD332 /* Extensions */,
 				B0EC9FB71F4E815300237326 /* BLEController */,
 				B0EC9FCC1F4E815300237326 /* BLEControllerTests */,
 				B0EC9FD71F4E815300237326 /* BLEControllerUITests */,
@@ -99,10 +123,15 @@
 			children = (
 				B0EC9FB81F4E815300237326 /* AppDelegate.swift */,
 				B0EC9FBA1F4E815300237326 /* ViewController.swift */,
+				B03FE7C71F57009E003BD332 /* HomeViewController.swift */,
+				B03FE7C91F5700DD003BD332 /* ActivityViewController.swift */,
+				B03FE7CB1F5700FE003BD332 /* ProfileViewController.swift */,
 				B0EC9FBC1F4E815300237326 /* Main.storyboard */,
 				B0EC9FBF1F4E815300237326 /* Assets.xcassets */,
 				B0EC9FC11F4E815300237326 /* LaunchScreen.storyboard */,
 				B0EC9FC41F4E815300237326 /* Info.plist */,
+				B03FE7C31F56F194003BD332 /* Main.storyboard_ */,
+				B03FE7C51F56F4C0003BD332 /* Main_ipad.storyboard */,
 			);
 			path = BLEController;
 			sourceTree = "<group>";
@@ -235,9 +264,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03FE7C61F56F4C0003BD332 /* Main_ipad.storyboard in Resources */,
 				B0EC9FC31F4E815300237326 /* LaunchScreen.storyboard in Resources */,
 				B0EC9FC01F4E815300237326 /* Assets.xcassets in Resources */,
 				B0EC9FBE1F4E815300237326 /* Main.storyboard in Resources */,
+				B03FE7C41F56F194003BD332 /* Main.storyboard_ in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03FE7C81F57009E003BD332 /* HomeViewController.swift in Sources */,
+				B03FE7CA1F5700DD003BD332 /* ActivityViewController.swift in Sources */,
 				B0EC9FBB1F4E815300237326 /* ViewController.swift in Sources */,
 				B0EC9FB91F4E815300237326 /* AppDelegate.swift in Sources */,
+				B03FE7CC1F5700FE003BD332 /* ProfileViewController.swift in Sources */,
+				B03FE7C01F5340FC003BD332 /* String+HexConverter.swift in Sources */,
+				B03FE7C21F534275003BD332 /* Data+HexJoin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,7 +456,7 @@
 				DEVELOPMENT_TEAM = Q93Q9LL75W;
 				INFOPLIST_FILE = BLEController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dev.BLEController.BLEController;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.BLEController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -433,7 +469,7 @@
 				DEVELOPMENT_TEAM = Q93Q9LL75W;
 				INFOPLIST_FILE = BLEController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dev.BLEController.BLEController;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.BLEController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -516,6 +552,7 @@
 				B0EC9FDF1F4E815300237326 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0EC9FE01F4E815300237326 /* Build configuration list for PBXNativeTarget "BLEControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +561,7 @@
 				B0EC9FE21F4E815300237326 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0EC9FE31F4E815300237326 /* Build configuration list for PBXNativeTarget "BLEControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +570,7 @@
 				B0EC9FE51F4E815300237326 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
