@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-BLEController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BLEControllerTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BLEControllerUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICircularProgressRing.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1A01FECEF46019CCD92DE9CDBB799910</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53FA4B3ACC3C04F2A6383ECE22B47D00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BFC74CAE99F71C7C42A698D056FB2C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E62B8F9C32DFAFB396BCEEFB6A78029</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
