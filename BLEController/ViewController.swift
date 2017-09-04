@@ -14,6 +14,13 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     var manager:CBCentralManager!
     var BLEBand:CBPeripheral!
+    let ulti = Ultilities.init()
+    var actData = ["device":"",
+                   "dateTime":"",
+                   "steps":"",
+                   "dist":"",
+                   "cal":"",
+                   "hr":""]
     
     let BLE_NAME                                     = "MI Band 2"
 
@@ -70,7 +77,26 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     @IBOutlet weak var txtSteps: UITextField!
     @IBOutlet weak var txtHR: UITextField!
     
+    @IBOutlet weak var txtShowDist: UITextField!
+    @IBOutlet weak var txtShowCal: UITextField!
+    @IBOutlet weak var txtShowSteps: UITextField!
+    @IBOutlet weak var txtShowHeart: UITextField!
+    
+    @IBAction func btnGetData(_ sender: UIButton) {
+        let tmp = getAct(dataName: "HistoryAct")
+        
+        print(tmp)
+    }
     @IBAction func btnRefresh(_ sender: Any) {
+        txtHR.text = ""
+        txtCal.text = ""
+        txtDist.text = ""
+        txtSteps.text = ""
+        txtBattery.text = ""
+        actData.updateValue("", forKey: "steps")
+        actData.updateValue("", forKey: "dist")
+        actData.updateValue("", forKey: "cal")
+        actData.updateValue("", forKey: "hr")
         discoverDevices()
 //        showAlert(msg: "scanning...",view: self)
         
@@ -90,9 +116,10 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         // Dispose of any resources that can be recreated.
     }
     
-    //    scan devices
+      /*scan devices*/
     @available(iOS 5.0, *)
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        
         var msg = ""
         switch (central.state) {
             
@@ -100,7 +127,8 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             msg = "Bluetooth is off"
         case .poweredOn:
             msg = "Bluetooth is on"
-            manager.scanForPeripherals(withServices: nil, options: nil)
+            discoverDevices()
+//            manager.scanForPeripherals(withServices: nil, options: nil)
         case .unsupported:
             msg = "Bluetooth unsupported"
         default: break
@@ -114,23 +142,28 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
 //        output(description: "", data: "Reconect" as AnyObject)
 //    }
     
-    //    connect devices
+        /*connect devices*/
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
         
         if(peripheral.name == BLE_NAME) {
             
             output(description: "Device name", data: peripheral.name as AnyObject)
+            let currentTime = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .medium)
+            actData["device"] = peripheral.name
+            actData["dateTime"] = currentTime
             self.BLEBand = peripheral
             self.BLEBand.delegate = self
             manager.stopScan()
             manager.connect(self.BLEBand, options: nil)
             
+            print(actData)
+            
         }
         
     }
     
-    //    get service
+    /*get service*/
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         peripheral.delegate = self
 //        print("get service")
@@ -138,7 +171,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
     }
     
-    //    get characteristics
+    /*get characteristics*/
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         
         if (error != nil) {
@@ -156,7 +189,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         }
     }
     
-    //    get data
+    /*get data*/
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         
         if error != nil {
@@ -171,50 +204,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
                 {
                     peripheral.setNotifyValue(true, for: cc)
                     peripheral.readValue(for: cc)
-                    
-//                    switch service.uuid.uuidString {
-//                        
-//                    case strUUID_SERVICE_HEART_RATE:
-//                        
-//
-//                        if cc.uuid.uuidString == strUUID_SERVICE_HR_CHARACTERISTIC_MUASEMENT{
-//                            
-//                            // Set notification on heart rate measurement
-//                            print("Found a Heart Rate Measurement Characteristic")
-//                            peripheral.setNotifyValue(true, for: cc)
-//                        
-//                        }else if cc.uuid.uuidString == strUUID_SERVICE_HR_CHARACTERISTIC_CTRLPOINT{
-//
-//                            // Write heart rate control point
-//                            print("Found a Heart Rate Control Point Characteristic")
-//                            
-//                            var rawArray:[UInt8] = [0x01];
-//                            let data = NSData(bytes: &rawArray, length: rawArray.count)
-//                            peripheral.writeValue(data as Data, for: cc, type: CBCharacteristicWriteType.withResponse)
-//
-//                        }
-//                            
-////                        peripheral.readValue(for: cc)
-//                        output(description: "UUID_SERVICE_HR_CHARACTERISTIC: ", data: cc.uuid.uuidString as AnyObject)
-//                        
-//                    case strUUID_SERVICE_FEE0:
-//                        
-//                        peripheral.readValue(for: cc)
-//                        output(description: "UUID_SERVICE_FEE0_CHARACTERISTIC: ", data: cc.uuid.uuidString as AnyObject)
-//                        
-//                    case strUUID_SERVICE_FEE1:
-//                        
-//                        peripheral.readValue(for: cc)
-//                        output(description: "UUID_SERVICE_FEE1_CHARACTERISTIC: ", data: cc.uuid.uuidString as AnyObject)
-//                        
-//                    case strUUID_SERVICE_DEVICE_INFO:
-//                        
-//                        peripheral.readValue(for: cc)
-//                        output(description: "UUID_SERVICE_DEVICE_INFO_CHARACTERISTIC: ", data: cc.uuid.uuidString as AnyObject)
-//                        
-//                    default: break
-//                        
-//                    }
                     
                 }
                 
@@ -236,48 +225,60 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
 //        }
 //    }
     
-    //    update value data changed
+    /*update display control when data changed*/
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         
 //        output(description: "cc", data: characteristic.uuid.uuidString as AnyObject)
 //        output(description: "cc.value", data: characteristic.value as AnyObject)
 //        print("---")
-        txtDeviceNm.text  = peripheral.name
+        
+//        print(actData["device"] as! String)
+//        let tmp = actData["device"] as! String
+        
+        txtDeviceNm.text  = actData["device"]
         
         switch characteristic.uuid.uuidString {
             
         case strUUID_SERVICE_FEE0_CHARACTERISTIC_STEPS:
             
             guard let data = characteristic.value else { return }
-            txtSteps.text = String(describing: (data[1] | data[2]))
-            txtDist.text = String(describing: (data[5] | data[6] | data[7] | data[8]))
-            txtCal.text = String(describing: (data[9] | data[10] | data[11] | data[12]))
+            output(description: "get steps", data: data as AnyObject)
+            let stepInfo = StepsInfo.init(data)
+            actData.updateValue(String(describing: stepInfo!.steps), forKey: "steps")
+            actData.updateValue(String(describing: stepInfo!.dist), forKey: "dist")
+            actData.updateValue(String(describing: stepInfo!.cal), forKey: "cal")
+
+            txtSteps.text = String(describing: stepInfo!.steps)
+            txtDist.text = String(describing: stepInfo!.dist)
+            txtCal.text = String(describing: stepInfo!.cal)
             
         case strUUID_SERVICE_FEE0_CHARACTERISTIC_BATTERY:
             
             guard let data = characteristic.value else {return}
+            output(description: "get device battery", data: data as AnyObject)
             txtBattery.text = String(describing: data[1])
             
         case strUUID_SERVICE_HR_CHARACTERISTIC_MUASEMENT:
             
             guard let data = characteristic.value else {return}
-            updateHR(heartRateData: data as NSData)
-            output(description: "hr muasement", data: data as AnyObject)
+            output(description: "get hr muasement", data: data as AnyObject)
             
-            
-        case strUUID_SERVICE_HR_CHARACTERISTIC_CTRLPOINT:
-            
-            guard let data = characteristic.value else {return}
-            output(description: "hr control point", data: data as AnyObject)
-            
-            var rawArray:[UInt8] = [0x01];
-            let wData = NSData(bytes: &rawArray, length: rawArray.count)
-            peripheral.writeValue(wData as Data, for: characteristic, type: CBCharacteristicWriteType.withResponse)
+            let hrInfo = HeartRate.init(data)
+            actData.updateValue(String(describing: hrInfo.hrMeasurement), forKey: "hr")
+            txtHR.text = String (describing: hrInfo.hrMeasurement)
+//        case strUUID_SERVICE_HR_CHARACTERISTIC_CTRLPOINT:
+//            
+//            guard let data = characteristic.value else {return}
+//            output(description: "hr control point", data: data as AnyObject)
+//            
+//            var rawArray:[UInt8] = [0x01];
+//            let wData = NSData(bytes: &rawArray, length: rawArray.count)
+//            peripheral.writeValue(wData as Data, for: characteristic, type: CBCharacteristicWriteType.withResponse)
             
         case strUUID_SERVICE_FEE0_CHARACTERISTIC_ACTIVITY:
             
             guard let data = characteristic.value else {return}
-            output(description: "activity", data: data as AnyObject)
+            output(description: "get activity", data: data as AnyObject)
             
         case strUUID_SERVICE_DEVICE_INFO_CHARACTERISTIC_HW:
             
@@ -286,13 +287,15 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         case strUUID_SERVICE_DEVICE_INFO_CHARACTERISTIC_FW:
             
             guard let data = characteristic.value else {return}
-            let fw = hexStr2Ascci(String(describing: data as AnyObject))
+            output(description: "get device fw", data: data as AnyObject)
+            let fw = ulti.hexStr2Ascci(String(describing: data as AnyObject))
             txtFW.text = fw
             
         case strUUID_SERVICE_DEVICE_INFO_CHARACTERISTIC_SERIAL:
             
             guard let data = characteristic.value else {return}
-            let serial = hexStr2Ascci(String(describing: data as AnyObject))
+            output(description: "get device serial", data: data as AnyObject)
+            let serial = ulti.hexStr2Ascci(String(describing: data as AnyObject))
             txtSerial.text = serial
 
 
@@ -300,25 +303,28 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             
         }
         
+//        saveAct(data: actData)
+        
     }
     
-    //    connect fail
+    /*connect fail*/
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         output(description: "failed to connect", data: peripheral as AnyObject)
         output(description: "error", data: error as AnyObject)
     }
     
-    //    disconnect devices
+    /*disconnect devices*/
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         
         manager.cancelPeripheralConnection(BLEBand)
+        print(actData)
+        saveAct(data: actData)
 //        central.scanForPeripherals(withServices: nil, options: nil)
         print("disconnect device")
     }
     
     func output(description: String, data: AnyObject){
         print("\(description): \(data)")
-//        print("\(description): \(data)",terminator: "")
 
     }
     
@@ -334,237 +340,91 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         manager.scanForPeripherals(withServices: nil, options: nil)
     }
     
+    /*save data*/
+    /*data:
+     deviceName
+     dataTime
+     heartRate
+     steps
+     distance
+     calories
+     */
     
-    func hexStr2Bytes(_ hexStr: String) -> [UInt8]? {
+    func saveAct(data: [String:String]){
         
-        let string = hexStr.replacingOccurrences(of: " ", with: "")
-        let length = string.characters.count
-        if (length & 1 != 0 ){
-            return nil
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        //**Note:** Here we are providing the entityName **`Entity`** that we have added in the model
+
+        // long way
+//        let entity = NSEntityDescription.entity(forEntityName: "HistoryAct", in: context)
+//        let myItem = NSManagedObject(entity: entity!, insertInto: context)
+
+        //        short way
+        let activity = NSEntityDescription.insertNewObject(forEntityName: "HistoryAct", into: context)
+        
+        
+//            let dateTime = ulti.string2Date(strDate: data["dateTime"]!,dateFormat: "yyyy-MM-dd, hh:mm:ss a")
+            activity.setValue(data["dateTime"], forKey: "dateTime")
+            activity.setValue(data["device"], forKey: "device")
+            activity.setValue(data["steps"], forKey: "steps")
+            activity.setValue(data["dist"], forKey: "dist")
+            activity.setValue(data["cal"], forKey: "cal")
+            activity.setValue(data["hr"], forKey: "hr")
+        
+        
+        do {
+            try context.save()
+            print("saved")
         }
-        var bytes = [UInt8]()
-        bytes.reserveCapacity(length/2)
-        var index = string.startIndex
-        for _ in 0..<length/2 {
-            let nextIndex = string.index(index, offsetBy: 2)
-            if let b = UInt8(string[index..<nextIndex], radix: 16) {
-                bytes.append(b)
-            } else {
-                return nil
+        catch{
+            print("There was an error in saving data")
+        }
+    }
+    
+    /*Retrieving Data*/
+    func getAct(dataName: String) -> [[String:String]]{
+        
+        var historyData = [[String:String]]()
+        var dailyData = [String:String]()
+        
+        // Obtaining data from model
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: dataName)
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do {
+            
+            let results = try context.fetch(fetchRequest)
+//            return results
+            
+            if results.count > 0{
+
+                for result in results as! [NSManagedObject]{
+                    
+                    dailyData["dateTime"] = String(describing: result.value(forKey: "dateTime")!)
+                    dailyData["device"] = String(describing: result.value(forKey: "device")!)
+                    dailyData["steps"] = String(describing: result.value(forKey: "steps")!)
+                    dailyData["dist"] = String(describing: result.value(forKey: "dist")!)
+                    dailyData["cal"] = String(describing: result.value(forKey: "cal")!)
+                    dailyData["hr"] = String(describing: result.value(forKey: "hr")!)
+                    
+                    historyData.append(dailyData)
+                    
+                }
+            
             }
-            index = nextIndex
+            
+        } catch {
+            print("Error")
         }
-        return bytes
-    }
-    
-    func hexStr2Ascci(_ hexStr: String) -> String{
-        
-        let hexString = hexStr.replacingOccurrences(of: " ", with: "")
-        let pattern = "(0x)?([0-9a-f]{2})"
-        let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
-        let nsString = hexString as NSString
-        let matches = regex.matches(in: hexString, options: [], range: NSMakeRange(0, nsString.length))
-        let characters = matches.map {
-            Character(UnicodeScalar(UInt32(nsString.substring(with: $0.rangeAt(2)), radix: 16)!)!)
-        }
-        return String(characters)
-    }
-    
-    func updateHR(heartRateData: NSData){
-        
-        var buffer = [UInt8](repeating: 0x00, count: heartRateData.length)
-        heartRateData.getBytes(&buffer, length: buffer.count)
-        
-        var bpm: UInt16?
-        if (buffer.count >= 2){
-            if (buffer[0] & 0x01 == 0){
-                bpm = UInt16(buffer[1]);
-            }else {
-                bpm = UInt16(buffer[1]) << 8
-                bpm =  bpm! | UInt16(buffer[2])
-            }
-        }
-        
-        if let actualBpm = bpm{
-            print(actualBpm)
-            txtHR.text = String(describing: actualBpm as AnyObject)
-        }else {
-            print(bpm as Any)
-//            txtHR.text = actualBpm
-        }
-    }
-    
-    func showAlert(msg: String, view: UIViewController){
-        let alertCtrl = UIAlertController(title: "notify",
-                                          message:  msg,
-                                          preferredStyle: .alert)
-        
-        let okAct = UIAlertAction(title: "ok", style: UIAlertActionStyle.default){
-            UIAlertAction in
-            NSLog("pressed ok")
-        }
-        
-        alertCtrl.addAction(okAct)
-        view.present(alertCtrl, animated: true, completion: nil)
+        output(description: "history data", data: historyData as AnyObject)
+        return historyData
         
     }
-    
     
     
 }
 
-struct StepsInfo{
-    
-//    hexData = 
-//    0c --> ?
-//    57 --> steps: 87
-//    00
-//    00
-//    
-//    00
-//    35 --> dist: 53 m
-//    00
-//    00
-//    
-//    00
-//    02 --> cal: 2
-//    00
-//    00
-//    
-//    00
-//    info.steps =    ((((data[1] & 255) | ((data[2] & 255) << 8))) );
-//    info.distanza = ((((data[5] & 255) | ((data[6] & 255) << 8)) | (data[7] & 16711680)) | ((data[8] & 255) << 24));
-//    info.calorie = ((((data[9] & 255) | ((data[10] & 255) << 8)) | (data[11] & 16711680)) | ((data[12] & 255) << 24));
-//    
-
-
-//    input = hex string
-//    convert to bytes[]
-//    convert to string from bytes[position]
-//    output = join after convert
-    
-    var steps:  Int
-    var dist:   Int
-    var cal:    Int
-    
-    
-    init?(_ _data: Data) {
-        
-        self.steps = (Int(_data[1] | _data[2]))
-        self.dist = (Int(_data[5] | _data[6] | _data[7] | _data[8]))
-        self.cal = (Int(_data[9] | _data[10] | _data[11] | _data[12]))
-        
-    }
-    
-}
-
-struct DeviceInfo {
-    
-    var strSerial: String
-    var strHardwareVersion: String
-    var strFirmwareVersion: String
-    var strDeviceName: String
-    
-    init(_ data: [String]) {
-        
-
-        self.strSerial            = data[0]
-        self.strHardwareVersion = data[1]
-        self.strFirmwareVersion = data[2]
-        self.strDeviceName       = data[3]
-
-    }
-}
-
-struct BatteryInfo {
-    
-//    hexStr = 0f 5c 00 b2 07 01 01 00 00 00 00 b2 07 01 01 04 10 05 80 63
-
-//     miband2
-//    0f --> ?
-//    4f --> level: 79%
-//    00
-//    e1
-//    
-//    07
-//    08
-//    18
-//    15
-//    
-//    29
-//    19
-//    f0
-//    e1
-//    
-//    07
-//    08
-//    18
-//    15
-//    
-//    2a
-//    19
-//    f0
-//    64
-    //
-    //        f			= ?
-    //        30		= 48%
-    //        00		= 00 = STATUS_NORMAL, 01 = STATUS_CHARGING
-    //        e0 07		= 2016
-    //        0b		= 11
-    //        1a		= 26
-    //        12		= 18
-    //        23		= 35
-    //        2c		= 44
-    //        04		= 4 // num charges??
-    //
-    //        e0 07		= 2016 // last charge time
-    //        0b		= 11
-    //        1a		= 26
-    //        17		= 23
-    //        2b		= 43
-    //        3b		= 59
-    //        04		= 4   // num charges??
-    //        64		= 100 // how much was charged
-
-//    miband1
-//    Battery Info:
-//    Level in%: byte[0]
-//    Charges:   0xffff & (0xff & byte[7] | (0xff & byte[8]) << 8)
-//    Status:    byte[9]
-//    where 1 = Battery low
-//    2 = Battery charging
-//    3 = Battery full (charging)
-//    4 = Not charging
-//    
-//    Last charged Date Information (Gregorian Calendar):
-//    Year:        byte[1] + 2000
-//    Month:       byte[2]
-//    Day / date:  byte[3]
-//    
-//    Hour (0-24): byte[4]
-//    Minute:      byte[5]
-//    Second:      byte[6]
-//    
-//    Example response: 33 0E 09 1B 08 03 2E 06 00 04
-//    => 51 % charged
-//    => Not charging
-//    => Last charged 2014\09\27 08:03:46
-//    => 6 Cycles (seems like someone charged it before me 5 times ...)
-
-    
-    
-    var intLevel: Int
-    
-    init(_ data: Data) {
-        
-        
-        self.intLevel = Int(data[1])
-    }
-}
-
-struct HeartRate{
-
-
-}
 
 
