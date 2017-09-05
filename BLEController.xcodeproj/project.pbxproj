@@ -11,7 +11,7 @@
 		77E2A8AB68C6D115B7ABB4AA /* Pods_BLEControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F32DAB3E6A62E098B11EB7 /* Pods_BLEControllerTests.framework */; };
 		B004D0321F5C2E9F007BBBDE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004D0311F5C2E9F007BBBDE /* TestViewController.swift */; };
 		B004D0381F5C4189007BBBDE /* test.storyboard_ in Resources */ = {isa = PBXBuildFile; fileRef = B004D0371F5C4189007BBBDE /* test.storyboard_ */; };
-		B0246BFF1F5CC68C0083BED9 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0246BFE1F5CC68C0083BED9 /* test.storyboard */; };
+		B0246BFF1F5CC68C0083BED9 /* test.storyboard__ in Resources */ = {isa = PBXBuildFile; fileRef = B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */; };
 		B03FE7C01F5340FC003BD332 /* String+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */; };
 		B03FE7C21F534275003BD332 /* Data+HexJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7C11F534275003BD332 /* Data+HexJoin.swift */; };
 		B03FE7C41F56F194003BD332 /* Main.storyboard_ in Resources */ = {isa = PBXBuildFile; fileRef = B03FE7C31F56F194003BD332 /* Main.storyboard_ */; };
@@ -28,11 +28,12 @@
 		B0E0E1F41F579D7800D24996 /* Activity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0E0E1F21F579D7800D24996 /* Activity.xcdatamodeld */; };
 		B0EC9FB91F4E815300237326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FB81F4E815300237326 /* AppDelegate.swift */; };
 		B0EC9FBB1F4E815300237326 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FBA1F4E815300237326 /* ViewController.swift */; };
-		B0EC9FBE1F4E815300237326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EC9FBC1F4E815300237326 /* Main.storyboard */; };
+		B0EC9FBE1F4E815300237326 /* Main.storyboard_ in Resources */ = {isa = PBXBuildFile; fileRef = B0EC9FBC1F4E815300237326 /* Main.storyboard_ */; };
 		B0EC9FC01F4E815300237326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0EC9FBF1F4E815300237326 /* Assets.xcassets */; };
 		B0EC9FC31F4E815300237326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EC9FC11F4E815300237326 /* LaunchScreen.storyboard */; };
 		B0EC9FCE1F4E815300237326 /* BLEControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FCD1F4E815300237326 /* BLEControllerTests.swift */; };
 		B0EC9FD91F4E815300237326 /* BLEControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FD81F4E815300237326 /* BLEControllerUITests.swift */; };
+		B0F54DEB1F5D029E0068241A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F54DEA1F5D029E0068241A /* Main.storyboard */; };
 		B861C4F89CF1E461068E9998 /* Pods_BLEControllerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F3288D65F7F9CEFBC7AA31 /* Pods_BLEControllerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +62,7 @@
 		507FC46CEB49A3E499409D4E /* Pods-BLEController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLEController/Pods-BLEController.release.xcconfig"; sourceTree = "<group>"; };
 		B004D0311F5C2E9F007BBBDE /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = BLEController/TestViewController.swift; sourceTree = "<group>"; };
 		B004D0371F5C4189007BBBDE /* test.storyboard_ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.storyboard_; sourceTree = "<group>"; };
-		B0246BFE1F5CC68C0083BED9 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.storyboard__; sourceTree = "<group>"; };
 		B03D8D8BE5680E4166DA1188 /* Pods-BLEControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEControllerTests/Pods-BLEControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+HexConverter.swift"; path = "Extensions/String+HexConverter.swift"; sourceTree = "<group>"; };
 		B03FE7C11F534275003BD332 /* Data+HexJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+HexJoin.swift"; path = "Extensions/Data+HexJoin.swift"; sourceTree = "<group>"; };
@@ -80,7 +81,7 @@
 		B0EC9FB51F4E815300237326 /* BLEController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EC9FB81F4E815300237326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0EC9FBA1F4E815300237326 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B0EC9FBD1F4E815300237326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0EC9FBD1F4E815300237326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Base; path = Base.lproj/Main.storyboard_; sourceTree = "<group>"; };
 		B0EC9FBF1F4E815300237326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0EC9FC21F4E815300237326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0EC9FC41F4E815300237326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		B0EC9FD41F4E815300237326 /* BLEControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EC9FD81F4E815300237326 /* BLEControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEControllerUITests.swift; sourceTree = "<group>"; };
 		B0EC9FDA1F4E815300237326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0F54DEA1F5D029E0068241A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2F32DAB3E6A62E098B11EB7 /* Pods_BLEControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5E74A3D612130D6340A0B1 /* Pods-BLEControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLEControllerUITests/Pods-BLEControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F2CF6F21BF3C07823880B34F /* Pods_BLEController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +132,7 @@
 				B03FE7C51F56F4C0003BD332 /* test_Main_ipad.storyboard */,
 				B004D0311F5C2E9F007BBBDE /* TestViewController.swift */,
 				B004D0371F5C4189007BBBDE /* test.storyboard_ */,
-				B0246BFE1F5CC68C0083BED9 /* test.storyboard */,
+				B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */,
 			);
 			name = DumpTest;
 			path = ..;
@@ -212,12 +214,11 @@
 		B0EC9FB71F4E815300237326 /* BLEController */ = {
 			isa = PBXGroup;
 			children = (
+				B0F54DED1F5D054B0068241A /* Views */,
+				B0F54DEC1F5D05300068241A /* Controllers */,
 				B0EC9FB81F4E815300237326 /* AppDelegate.swift */,
-				B0EC9FBA1F4E815300237326 /* ViewController.swift */,
-				B03FE7C71F57009E003BD332 /* HomeViewController.swift */,
-				B03FE7C91F5700DD003BD332 /* ActivityViewController.swift */,
-				B03FE7CB1F5700FE003BD332 /* ProfileViewController.swift */,
-				B0EC9FBC1F4E815300237326 /* Main.storyboard */,
+				B0F54DEA1F5D029E0068241A /* Main.storyboard */,
+				B0EC9FBC1F4E815300237326 /* Main.storyboard_ */,
 				B0EC9FBF1F4E815300237326 /* Assets.xcassets */,
 				B0EC9FC11F4E815300237326 /* LaunchScreen.storyboard */,
 				B0EC9FC41F4E815300237326 /* Info.plist */,
@@ -247,6 +248,24 @@
 				B0EC9FDA1F4E815300237326 /* Info.plist */,
 			);
 			path = BLEControllerUITests;
+			sourceTree = "<group>";
+		};
+		B0F54DEC1F5D05300068241A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0EC9FBA1F4E815300237326 /* ViewController.swift */,
+				B03FE7C71F57009E003BD332 /* HomeViewController.swift */,
+				B03FE7C91F5700DD003BD332 /* ActivityViewController.swift */,
+				B03FE7CB1F5700FE003BD332 /* ProfileViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B0F54DED1F5D054B0068241A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B33325E248F69F72DAF1C501 /* Pods */ = {
@@ -384,10 +403,11 @@
 				B03FE7C61F56F4C0003BD332 /* test_Main_ipad.storyboard in Resources */,
 				B0EC9FC31F4E815300237326 /* LaunchScreen.storyboard in Resources */,
 				B0EC9FC01F4E815300237326 /* Assets.xcassets in Resources */,
-				B0EC9FBE1F4E815300237326 /* Main.storyboard in Resources */,
+				B0F54DEB1F5D029E0068241A /* Main.storyboard in Resources */,
+				B0EC9FBE1F4E815300237326 /* Main.storyboard_ in Resources */,
 				B004D0381F5C4189007BBBDE /* test.storyboard_ in Resources */,
 				B03FE7C41F56F194003BD332 /* Main.storyboard_ in Resources */,
-				B0246BFF1F5CC68C0083BED9 /* test.storyboard in Resources */,
+				B0246BFF1F5CC68C0083BED9 /* test.storyboard__ in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,12 +631,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B0EC9FBC1F4E815300237326 /* Main.storyboard */ = {
+		B0EC9FBC1F4E815300237326 /* Main.storyboard_ */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B0EC9FBD1F4E815300237326 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main.storyboard_;
 			sourceTree = "<group>";
 		};
 		B0EC9FC11F4E815300237326 /* LaunchScreen.storyboard */ = {
