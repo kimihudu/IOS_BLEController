@@ -26,27 +26,43 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="1" height="3"/>
                                 <state key="normal" backgroundImage="steps"/>
+                                <connections>
+                                    <action selector="btnGo2Steps:" destination="aU1-BE-QF4" eventType="touchUpInside" id="NK2-MU-lbt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yly-gm-7c9">
                                 <rect key="frame" x="402" y="129" width="237" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="1" height="3"/>
                                 <state key="normal" backgroundImage="hr"/>
+                                <connections>
+                                    <action selector="btnGo2HR:" destination="aU1-BE-QF4" eventType="touchUpInside" id="LRs-0n-GLs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycD-Fe-569">
                                 <rect key="frame" x="277" y="512" width="237" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="device"/>
+                                <connections>
+                                    <action selector="btnGo2Device:" destination="aU1-BE-QF4" eventType="touchUpInside" id="zUU-R5-yWt"/>
+                                    <segue destination="CRd-T8-OQc" kind="showDetail" id="SJW-gw-Ch4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-hz-WtC">
                                 <rect key="frame" x="658" y="882" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="refresh"/>
+                                <connections>
+                                    <action selector="btnRefresh:" destination="aU1-BE-QF4" eventType="touchUpInside" id="mYg-JF-XoI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq8-98-xLi">
                                 <rect key="frame" x="20" y="882" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="ble"/>
+                                <connections>
+                                    <action selector="btnConnect:" destination="aU1-BE-QF4" eventType="touchUpInside" id="rTJ-n0-uGp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
@@ -56,6 +72,9 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="DMa-VF-zvf" kind="show" identifier="go2Device" id="tkd-nY-8Jg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSa-PZ-VXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,13 +138,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5E-4Q-xII">
-                                        <rect key="frame" x="33" y="95" width="174" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhn-ro-aOQ">
                                         <rect key="frame" x="33" y="145" width="544" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,7 +148,7 @@
                                                 <state key="normal" backgroundImage="hr"/>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMV-E1-Pvq" userLabel="ringHR" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
-                                                <rect key="frame" x="373" y="22" width="150" height="159"/>
+                                                <rect key="frame" x="373" y="22" width="159" height="159"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
@@ -217,7 +229,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZz-2X-SQ3" userLabel="ringSteps" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
-                                                <rect key="frame" x="375" y="0.0" width="150" height="159"/>
+                                                <rect key="frame" x="375" y="0.0" width="159" height="159"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
@@ -283,7 +295,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLw-Cy-DoA" userLabel="ringDist" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
-                                                <rect key="frame" x="374" y="0.0" width="150" height="159"/>
+                                                <rect key="frame" x="374" y="0.0" width="159" height="159"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
@@ -349,7 +361,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTk-eF-p1f" userLabel="ringCal" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
-                                                <rect key="frame" x="372" y="-1" width="150" height="159"/>
+                                                <rect key="frame" x="372" y="-1" width="159" height="159"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
@@ -413,6 +425,12 @@
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Activity" selectedImage="activity" id="9jg-h4-2Oj"/>
+                    <connections>
+                        <outlet property="ringCal" destination="rTk-eF-p1f" id="KG5-4j-dwc"/>
+                        <outlet property="ringDist" destination="aLw-Cy-DoA" id="RBh-WL-1Ok"/>
+                        <outlet property="ringHR" destination="lMV-E1-Pvq" id="gMz-gH-Gdc"/>
+                        <outlet property="ringSteps" destination="aZz-2X-SQ3" id="dCd-rW-GcR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syy-zk-dzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -597,6 +615,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-3m-4zt">
+                                        <rect key="frame" x="289" y="21" width="174" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -610,7 +635,7 @@
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhB-UF-QOZ">
-                                <rect key="frame" x="438" y="514" width="238" height="48"/>
+                                <rect key="frame" x="548" y="514" width="128" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -642,4 +667,8 @@
         <image name="steps" width="16" height="16"/>
         <image name="weight" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tkd-nY-8Jg"/>
+        <segue reference="SJW-gw-Ch4"/>
+    </inferredMetricsTieBreakers>
 </document>

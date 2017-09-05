@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toast-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UICircularProgressRing.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A01FECEF46019CCD92DE9CDBB799910</key>
+		<key>0BA104A866B96D7BF1253A979FDE7C3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>507785ACAFA6EBFF477E83641A2F20B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BFC74CAE99F71C7C42A698D056FB2C9</key>
+		<key>8E62B8F9C32DFAFB396BCEEFB6A78029</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E62B8F9C32DFAFB396BCEEFB6A78029</key>
+		<key>F2C93681D48B78F75D7C3C827BDE86CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

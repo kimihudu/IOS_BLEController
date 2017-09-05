@@ -7,96 +7,109 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0312EDDDAA14B20122B256DD39B48B72 /* UICircularProgressRingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDE5BB3C059E659CAE5B58AC5869DE /* UICircularProgressRingDelegate.swift */; };
-		06E1EDF26D7E0551D29D269BC7C438B2 /* UICircularProgressRingGradientPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F9831792B628FF7A27CCF22E53483 /* UICircularProgressRingGradientPosition.swift */; };
-		23273319B3CE7815AB96FC9AE2836F68 /* UICircularProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5E9EE82EC899BCEDB16632056969D /* UICircularProgressRingView.swift */; };
+		018117FF6B29EFA8C92C6CDFF20325CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */; };
+		02F0271926F8AE4A229764C5B0D80D1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		1600B04BADA2ED5582A34D548E120CD0 /* UICircularProgressRing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4530115D190B4F5C64EBB41DE2D4BA6 /* UICircularProgressRing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AC9C02AADCA21238570ECA11AFD0387 /* UICircularProgressRingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D1BD94B59E221C1255A2B57BD24DD4 /* UICircularProgressRingLayer.swift */; };
 		267E87C7BAF441B422D9EF7B7CA4176A /* Pods-BLEControllerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 971F5A0F344EC0FC76E72841C0B95BEE /* Pods-BLEControllerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32C7D95F09412A0CD5EFB37E38B2D927 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		346726523B50CE4F0854E0D7593F2C48 /* Pods-BLEController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE993014631EFD854FD66749D84294D1 /* Pods-BLEController-dummy.m */; };
-		38C5D038D5FFD63A23B764AC18CF94F4 /* UICircularProgressRing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 167227B3C1B6DB01F9F3D6EE676158AD /* UICircularProgressRing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32C7D95F09412A0CD5EFB37E38B2D927 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		3384547913A04EAB45F15F080B74C962 /* UICircularProgressRingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3CFA305671646097F161E81CE20AE6 /* UICircularProgressRingStyle.swift */; };
+		424F0965ACACE7C8A6F18C67D9D50F16 /* UICircularProgressRingGradientPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFB09A01418B00BC6A6F03445147CC8 /* UICircularProgressRingGradientPosition.swift */; };
 		487085877A556794F27DB4DA1314BE9D /* Pods-BLEControllerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7748AA4002EB381A4153D28D7D9280E /* Pods-BLEControllerUITests-dummy.m */; };
-		910CCB5F1D0CDBEDA996DEA739ACB51A /* UICircularProgressRing.h in Headers */ = {isa = PBXBuildFile; fileRef = 76B2E8DAE5B390402294089AFB74BA12 /* UICircularProgressRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		950ED5166D052BD85FAC07AE54718803 /* UICircularProgressRingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5461EFFEF1D1790780496BD349BC09 /* UICircularProgressRingLayer.swift */; };
+		49A8F92A96207410850454B93BAC3B69 /* UICircularProgressRing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4081236D1A330E5E91AA8D0113241D33 /* UICircularProgressRing-dummy.m */; };
+		76A663A5BF2AD245B9766B7F592AA2A0 /* UICircularProgressRing.h in Headers */ = {isa = PBXBuildFile; fileRef = C20441C51DBCEFD5EA6383660D99F0EC /* UICircularProgressRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BE1AE0C40DB3378C324515313C79B27 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AE4B067FA797DC8360F20562147FAB3 /* Toast-Swift-dummy.m */; };
+		8FC213B137E020841BE9467CA14C383F /* UICircularProgressRingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892F2F44FE6E6F60A82F3433D787B74A /* UICircularProgressRingDelegate.swift */; };
+		90F12E2B77E19B44C094EE2F6FA8C06F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796EC832165FDAF6C5D3E39F5D66EA3 /* Toast.swift */; };
 		9C388A5AC08802D5F6DA49DEB5F4D6AA /* Pods-BLEControllerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81364B9C261558DD545C7B180940D62F /* Pods-BLEControllerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B37C93E086DB039965CE86FA63AC2193 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B7BE88F461A4FA1D532E3F89B8A221C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A714BDC044459F09EA325128E766F2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		B373ED9582EF9C3FB2B10043A4E24764 /* Pods-BLEController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80908D0F3DE230B4C781472EA7581180 /* Pods-BLEController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7BE88F461A4FA1D532E3F89B8A221C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		BF10477B57F1D053FBFCE5EA84E3BD4D /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F2D16356892B32295D9A13718062F2 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2407B969621927066DD6A1AAD58F70B /* UICircularProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A572E040AF6CC8B3C4E65AE53EA5C187 /* UICircularProgressRingView.swift */; };
 		CF04CE49C36929BE5FD48D993EA45948 /* Pods-BLEControllerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8AC851F968FEC83B15A929F16AE531 /* Pods-BLEControllerTests-dummy.m */; };
-		D0AAFD87692696BB3950D93DBC7ADC79 /* UICircularProgressRingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E815B89797A0E963E59F783185D06 /* UICircularProgressRingStyle.swift */; };
-		D1AAFE5DC6174C1A8D7ADB80BFBA420D /* Pods-BLEController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80908D0F3DE230B4C781472EA7581180 /* Pods-BLEController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6A23C1BF6FF3FC60A8D5C5BC3359030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F8F28601E3F55D4517E668CD74E4F085 /* UICircularProgressRing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CC2A52AE8C20777C788A012B8A8581 /* UICircularProgressRing-dummy.m */; };
+		CF8B1A51C1607694287B81DAA113DC38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */; };
+		E9E659AD23867EC73D9FC58ABE1D4B81 /* Pods-BLEController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE993014631EFD854FD66749D84294D1 /* Pods-BLEController-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F7201C6BCB440B1E966D8862A00DEF71 /* PBXContainerItemProxy */ = {
+		9786B9DD97E9058421262A73B041ED03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1A01FECEF46019CCD92DE9CDBB799910;
+			remoteGlobalIDString = 0BA104A866B96D7BF1253A979FDE7C3D;
 			remoteInfo = UICircularProgressRing;
+		};
+		FDCF05D5AF00DA739E0506384B912CD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2C93681D48B78F75D7C3C827BDE86CF;
+			remoteInfo = "Toast-Swift";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		004EB0E2F0FB4B458A709CB2F80AEEA6 /* UICircularProgressRing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UICircularProgressRing.modulemap; sourceTree = "<group>"; };
 		0AD3256DE4A8BD3DA557575C1E6904B9 /* Pods-BLEControllerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLEControllerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		167227B3C1B6DB01F9F3D6EE676158AD /* UICircularProgressRing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-umbrella.h"; sourceTree = "<group>"; };
+		12D1BD94B59E221C1255A2B57BD24DD4 /* UICircularProgressRingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingLayer.swift; path = UICircularProgressRing/UICircularProgressRingLayer.swift; sourceTree = "<group>"; };
+		1796EC832165FDAF6C5D3E39F5D66EA3 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
 		23177538C935B8D64F85D31911E761E8 /* Pods-BLEControllerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BLEControllerTests.modulemap"; sourceTree = "<group>"; };
+		25D4E79CDAA74835E891807A4517A1D7 /* Pods_BLEControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEControllerTests.framework; path = "Pods-BLEControllerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		276A919CE33A91FDE8B364F04CADC476 /* Pods-BLEControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEControllerTests.release.xcconfig"; sourceTree = "<group>"; };
-		39CC2A52AE8C20777C788A012B8A8581 /* UICircularProgressRing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICircularProgressRing-dummy.m"; sourceTree = "<group>"; };
+		33C1D965C53BC895E90B0A15A61D9CA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7342FF28AC27B00E9D029791F7E43C /* Pods-BLEControllerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEControllerUITests-frameworks.sh"; sourceTree = "<group>"; };
-		401621016290368E84ACB30F97BA347B /* Pods_BLEControllerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEControllerUITests.framework; path = "Pods-BLEControllerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4081236D1A330E5E91AA8D0113241D33 /* UICircularProgressRing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICircularProgressRing-dummy.m"; sourceTree = "<group>"; };
 		458104446EF94A34876626AAADF72077 /* Pods-BLEControllerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEControllerTests-frameworks.sh"; sourceTree = "<group>"; };
-		49DDE5BB3C059E659CAE5B58AC5869DE /* UICircularProgressRingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingDelegate.swift; path = UICircularProgressRing/UICircularProgressRingDelegate.swift; sourceTree = "<group>"; };
-		55C930B171453175F87F785BDCD67A44 /* UICircularProgressRing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-prefix.pch"; sourceTree = "<group>"; };
-		586F9831792B628FF7A27CCF22E53483 /* UICircularProgressRingGradientPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingGradientPosition.swift; path = UICircularProgressRing/UICircularProgressRingGradientPosition.swift; sourceTree = "<group>"; };
-		5E9927D5BB8F70D635FB753BCC0EC4CF /* Pods_BLEControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEControllerTests.framework; path = "Pods-BLEControllerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE4B067FA797DC8360F20562147FAB3 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
+		4E1C319DD83958FB6649D9F198FCA1B0 /* UICircularProgressRing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICircularProgressRing.xcconfig; sourceTree = "<group>"; };
+		54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		60B3B3072C0855FBC4C686673131AFB4 /* Pods-BLEController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BLEController.modulemap"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68128EE409ED21FFAF05696A22E12112 /* UICircularProgressRing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = UICircularProgressRing.modulemap; sourceTree = "<group>"; };
 		6B34A75493D20473F9453C979E4D097F /* Pods-BLEControllerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEControllerUITests-resources.sh"; sourceTree = "<group>"; };
 		6C54846E4263FB4ABB1133A3CA797375 /* Pods-BLEControllerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLEControllerTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6C7C5FAB1E7F2CB160D355915E90FCCE /* Pods_BLEController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEController.framework; path = "Pods-BLEController.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76B2E8DAE5B390402294089AFB74BA12 /* UICircularProgressRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICircularProgressRing.h; path = UICircularProgressRing/UICircularProgressRing.h; sourceTree = "<group>"; };
+		706686DB0105E9A3D3A960B2EDCD73EB /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
+		7326BA3EE94D9D548A2BF9471BA9A132 /* Pods_BLEController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEController.framework; path = "Pods-BLEController.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79AA804ACAB3C10F3BC1C50989AD4367 /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast_Swift.framework; path = "Toast-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8AC851F968FEC83B15A929F16AE531 /* Pods-BLEControllerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLEControllerTests-dummy.m"; sourceTree = "<group>"; };
 		80908D0F3DE230B4C781472EA7581180 /* Pods-BLEController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLEController-umbrella.h"; sourceTree = "<group>"; };
 		81364B9C261558DD545C7B180940D62F /* Pods-BLEControllerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLEControllerTests-umbrella.h"; sourceTree = "<group>"; };
 		8467D0F01E5A3AF69526CEC22C2A9904 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862B4AA8F95253FB974372A07093CD70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		892F2F44FE6E6F60A82F3433D787B74A /* UICircularProgressRingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingDelegate.swift; path = UICircularProgressRing/UICircularProgressRingDelegate.swift; sourceTree = "<group>"; };
 		8A9E7C1689990F14C1D44F478DC56A33 /* Pods-BLEController-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEController-resources.sh"; sourceTree = "<group>"; };
 		8CBFAE89BFE1BEFB385E50E43649BE21 /* Pods-BLEControllerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLEControllerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		92A243C4A6395B2FCED19D888C7005D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942986ED24B97EC82A73051E83FE4AAB /* Pods-BLEControllerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLEControllerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		971F5A0F344EC0FC76E72841C0B95BEE /* Pods-BLEControllerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLEControllerUITests-umbrella.h"; sourceTree = "<group>"; };
-		988DD7311149195D6B2644816AD9B38E /* UICircularProgressRing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICircularProgressRing.xcconfig; sourceTree = "<group>"; };
+		977740F9E7BF062761A9BD67DF4F3676 /* Pods_BLEControllerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEControllerUITests.framework; path = "Pods-BLEControllerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2230DE04A863D017C79ECF2C349EF0E /* Pods-BLEController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEController.debug.xcconfig"; sourceTree = "<group>"; };
 		A2E26DE7EA213865D31B9218E6E200B4 /* Pods-BLEController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEController.release.xcconfig"; sourceTree = "<group>"; };
+		A4530115D190B4F5C64EBB41DE2D4BA6 /* UICircularProgressRing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-umbrella.h"; sourceTree = "<group>"; };
+		A572E040AF6CC8B3C4E65AE53EA5C187 /* UICircularProgressRingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingView.swift; path = UICircularProgressRing/UICircularProgressRingView.swift; sourceTree = "<group>"; };
+		AAFB9466531CFED7415916E1FD6A8955 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
 		AC9D6F51CA6F59F3475B401C84BD2CA5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7DE842824F14B2356FD2485E31B59C6 /* UICircularProgressRing-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICircularProgressRing-prefix.pch"; sourceTree = "<group>"; };
 		B89CEC79C2E8C663AA165409C13255CA /* Pods-BLEControllerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEControllerTests-resources.sh"; sourceTree = "<group>"; };
 		BA7A76337C21A8B94803DAB794175BA4 /* Pods-BLEController-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLEController-acknowledgements.plist"; sourceTree = "<group>"; };
-		BCE5E9EE82EC899BCEDB16632056969D /* UICircularProgressRingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingView.swift; path = UICircularProgressRing/UICircularProgressRingView.swift; sourceTree = "<group>"; };
+		BC3CFA305671646097F161E81CE20AE6 /* UICircularProgressRingStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingStyle.swift; path = UICircularProgressRing/UICircularProgressRingStyle.swift; sourceTree = "<group>"; };
+		C20441C51DBCEFD5EA6383660D99F0EC /* UICircularProgressRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICircularProgressRing.h; path = UICircularProgressRing/UICircularProgressRing.h; sourceTree = "<group>"; };
 		C71F307D306F20EF1A5E63115345DCB9 /* Pods-BLEControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA23210A0D2866DAD54E090DC1A44333 /* Pods-BLEControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC280FDC944F9D0F4808FA71919C00BF /* Pods-BLEControllerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BLEControllerUITests.modulemap"; sourceTree = "<group>"; };
-		CC3E815B89797A0E963E59F783185D06 /* UICircularProgressRingStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingStyle.swift; path = UICircularProgressRing/UICircularProgressRingStyle.swift; sourceTree = "<group>"; };
 		CD5D8091FB704C7E409D579E4A0A5FDE /* Pods-BLEController-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEController-frameworks.sh"; sourceTree = "<group>"; };
 		D34DA3BA2F47570492F9456227B39C83 /* Pods-BLEControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		D38D894DEB90218054EEE1D4A1618386 /* UICircularProgressRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UICircularProgressRing.framework; path = UICircularProgressRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F2D16356892B32295D9A13718062F2 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
 		DF23B4EBEEC25FB8E5349B0957895300 /* Pods-BLEController-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLEController-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E9D93F1617C52E9B98FA3AD0B2917E8F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE2054DBE4B216A0DBFAEF2E2448A401 /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
+		F11AA1588B14704F7EF9B76D1F54272D /* UICircularProgressRing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UICircularProgressRing.framework; path = UICircularProgressRing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7748AA4002EB381A4153D28D7D9280E /* Pods-BLEControllerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLEControllerUITests-dummy.m"; sourceTree = "<group>"; };
-		FE5461EFFEF1D1790780496BD349BC09 /* UICircularProgressRingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingLayer.swift; path = UICircularProgressRing/UICircularProgressRingLayer.swift; sourceTree = "<group>"; };
+		FBFB09A01418B00BC6A6F03445147CC8 /* UICircularProgressRingGradientPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICircularProgressRingGradientPosition.swift; path = UICircularProgressRing/UICircularProgressRingGradientPosition.swift; sourceTree = "<group>"; };
+		FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		FE993014631EFD854FD66749D84294D1 /* Pods-BLEController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLEController-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0BA07A3B66ADAD89E6E946508FEC3704 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B37C93E086DB039965CE86FA63AC2193 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3B9A6BA3079CDA698C9F38FBB73C6F6F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,11 +126,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6F7702F47F1B2D73D943EA3086F5A44 /* Frameworks */ = {
+		60DA09E355E137349AB40F8943F89BE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A23C1BF6FF3FC60A8D5C5BC3359030 /* Foundation.framework in Frameworks */,
+				02F0271926F8AE4A229764C5B0D80D1C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		928AD2A770AC9ADCAFC2036DBAA3C15D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF8B1A51C1607694287B81DAA113DC38 /* Foundation.framework in Frameworks */,
+				018117FF6B29EFA8C92C6CDFF20325CD /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B3E93E3C0ABE9F7A65584EE26300C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A714BDC044459F09EA325128E766F2AC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,15 +172,24 @@
 			path = "Target Support Files/Pods-BLEController";
 			sourceTree = "<group>";
 		};
-		1A2BBCF3667679EC31B2BD5A692BE390 /* Products */ = {
+		1AF0CAE7FC0B4D9304B34BE876C2CBCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C7C5FAB1E7F2CB160D355915E90FCCE /* Pods_BLEController.framework */,
-				5E9927D5BB8F70D635FB753BCC0EC4CF /* Pods_BLEControllerTests.framework */,
-				401621016290368E84ACB30F97BA347B /* Pods_BLEControllerUITests.framework */,
-				D38D894DEB90218054EEE1D4A1618386 /* UICircularProgressRing.framework */,
+				7326BA3EE94D9D548A2BF9471BA9A132 /* Pods_BLEController.framework */,
+				25D4E79CDAA74835E891807A4517A1D7 /* Pods_BLEControllerTests.framework */,
+				977740F9E7BF062761A9BD67DF4F3676 /* Pods_BLEControllerUITests.framework */,
+				79AA804ACAB3C10F3BC1C50989AD4367 /* Toast_Swift.framework */,
+				F11AA1588B14704F7EF9B76D1F54272D /* UICircularProgressRing.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				978007DCB56F415BE390E0F949D4D4E5 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		53896807BB87BE0673EA049E43C2532F /* Pods-BLEControllerTests */ = {
@@ -171,38 +210,71 @@
 			path = "Target Support Files/Pods-BLEControllerTests";
 			sourceTree = "<group>";
 		};
+		7851C30E12091505D63DCDA3DC964110 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FC03F7C3BC15B1D59A83361502B9229 /* Toast-Swift */,
+				CB27E5287E17565FD60EFFE57764A3F8 /* UICircularProgressRing */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E6A1422DD9721881F4BA7FA7524982A0 /* Pods */,
-				1A2BBCF3667679EC31B2BD5A692BE390 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				7851C30E12091505D63DCDA3DC964110 /* Pods */,
+				1AF0CAE7FC0B4D9304B34BE876C2CBCB /* Products */,
 				C8A9DBC47774BE160998AA7296718A3C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9174003674A34BD38C72D6E2ECC71B96 /* UICircularProgressRing */ = {
+		81FF1FE747CC7C1DA74CD6F295A9208D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				76B2E8DAE5B390402294089AFB74BA12 /* UICircularProgressRing.h */,
-				49DDE5BB3C059E659CAE5B58AC5869DE /* UICircularProgressRingDelegate.swift */,
-				586F9831792B628FF7A27CCF22E53483 /* UICircularProgressRingGradientPosition.swift */,
-				FE5461EFFEF1D1790780496BD349BC09 /* UICircularProgressRingLayer.swift */,
-				CC3E815B89797A0E963E59F783185D06 /* UICircularProgressRingStyle.swift */,
-				BCE5E9EE82EC899BCEDB16632056969D /* UICircularProgressRingView.swift */,
-				CD4F90258F315B9FE6E78D95A87AEC71 /* Support Files */,
+				862B4AA8F95253FB974372A07093CD70 /* Info.plist */,
+				68128EE409ED21FFAF05696A22E12112 /* UICircularProgressRing.modulemap */,
+				4E1C319DD83958FB6649D9F198FCA1B0 /* UICircularProgressRing.xcconfig */,
+				4081236D1A330E5E91AA8D0113241D33 /* UICircularProgressRing-dummy.m */,
+				B7DE842824F14B2356FD2485E31B59C6 /* UICircularProgressRing-prefix.pch */,
+				A4530115D190B4F5C64EBB41DE2D4BA6 /* UICircularProgressRing-umbrella.h */,
 			);
-			name = UICircularProgressRing;
-			path = UICircularProgressRing;
+			name = "Support Files";
+			path = "../Target Support Files/UICircularProgressRing";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		8DC52938AF1443ABF4B70AD99C7EA8AF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				33C1D965C53BC895E90B0A15A61D9CA0 /* Info.plist */,
+				706686DB0105E9A3D3A960B2EDCD73EB /* Toast-Swift.modulemap */,
+				EE2054DBE4B216A0DBFAEF2E2448A401 /* Toast-Swift.xcconfig */,
+				4AE4B067FA797DC8360F20562147FAB3 /* Toast-Swift-dummy.m */,
+				AAFB9466531CFED7415916E1FD6A8955 /* Toast-Swift-prefix.pch */,
+				D8F2D16356892B32295D9A13718062F2 /* Toast-Swift-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Toast-Swift";
+			sourceTree = "<group>";
+		};
+		8FC03F7C3BC15B1D59A83361502B9229 /* Toast-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				1796EC832165FDAF6C5D3E39F5D66EA3 /* Toast.swift */,
+				8DC52938AF1443ABF4B70AD99C7EA8AF /* Support Files */,
+			);
+			name = "Toast-Swift";
+			path = "Toast-Swift";
+			sourceTree = "<group>";
+		};
+		978007DCB56F415BE390E0F949D4D4E5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				54F9A0E952988935C32EDDB1429D7133 /* Foundation.framework */,
+				FC2770B482BFE91273C8560623F1422C /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		BD55F1E1B50F73B8426285A4757BBC04 /* Pods-BLEControllerUITests */ = {
@@ -233,61 +305,46 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CD4F90258F315B9FE6E78D95A87AEC71 /* Support Files */ = {
+		CB27E5287E17565FD60EFFE57764A3F8 /* UICircularProgressRing */ = {
 			isa = PBXGroup;
 			children = (
-				E9D93F1617C52E9B98FA3AD0B2917E8F /* Info.plist */,
-				004EB0E2F0FB4B458A709CB2F80AEEA6 /* UICircularProgressRing.modulemap */,
-				988DD7311149195D6B2644816AD9B38E /* UICircularProgressRing.xcconfig */,
-				39CC2A52AE8C20777C788A012B8A8581 /* UICircularProgressRing-dummy.m */,
-				55C930B171453175F87F785BDCD67A44 /* UICircularProgressRing-prefix.pch */,
-				167227B3C1B6DB01F9F3D6EE676158AD /* UICircularProgressRing-umbrella.h */,
+				C20441C51DBCEFD5EA6383660D99F0EC /* UICircularProgressRing.h */,
+				892F2F44FE6E6F60A82F3433D787B74A /* UICircularProgressRingDelegate.swift */,
+				FBFB09A01418B00BC6A6F03445147CC8 /* UICircularProgressRingGradientPosition.swift */,
+				12D1BD94B59E221C1255A2B57BD24DD4 /* UICircularProgressRingLayer.swift */,
+				BC3CFA305671646097F161E81CE20AE6 /* UICircularProgressRingStyle.swift */,
+				A572E040AF6CC8B3C4E65AE53EA5C187 /* UICircularProgressRingView.swift */,
+				81FF1FE747CC7C1DA74CD6F295A9208D /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UICircularProgressRing";
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		E6A1422DD9721881F4BA7FA7524982A0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9174003674A34BD38C72D6E2ECC71B96 /* UICircularProgressRing */,
-			);
-			name = Pods;
+			name = UICircularProgressRing;
+			path = UICircularProgressRing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A885E50E7241FCAED0558F720EA13F3F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1600B04BADA2ED5582A34D548E120CD0 /* UICircularProgressRing-umbrella.h in Headers */,
+				76A663A5BF2AD245B9766B7F592AA2A0 /* UICircularProgressRing.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B57A0326F6B594DD35E3C562455124BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF10477B57F1D053FBFCE5EA84E3BD4D /* Toast-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAAE0136515AB62B746330EC239A33A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				267E87C7BAF441B422D9EF7B7CA4176A /* Pods-BLEControllerUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA9D4FAC035F5B5A7F1A55B4685B84DE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1AAFE5DC6174C1A8D7ADB80BFBA420D /* Pods-BLEController-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD93EC08E8E10547C894B25803AD5CD1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38C5D038D5FFD63A23B764AC18CF94F4 /* UICircularProgressRing-umbrella.h in Headers */,
-				910CCB5F1D0CDBEDA996DEA739ACB51A /* UICircularProgressRing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,16 +356,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDC6604C85D7FCACF1294A25B494BE40 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B373ED9582EF9C3FB2B10043A4E24764 /* Pods-BLEController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1A01FECEF46019CCD92DE9CDBB799910 /* UICircularProgressRing */ = {
+		0BA104A866B96D7BF1253A979FDE7C3D /* UICircularProgressRing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF8584C1C616B3878CF26131AB22435B /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */;
+			buildConfigurationList = 7273951487610CDAF1A1D9F8F618221C /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */;
 			buildPhases = (
-				43E7D7B6F2BD09BC38BC96419BC96A35 /* Sources */,
-				0BA07A3B66ADAD89E6E946508FEC3704 /* Frameworks */,
-				CD93EC08E8E10547C894B25803AD5CD1 /* Headers */,
+				4154B0D73A6833928FE4ED9A3F9DF099 /* Sources */,
+				60DA09E355E137349AB40F8943F89BE3 /* Frameworks */,
+				A885E50E7241FCAED0558F720EA13F3F /* Headers */,
 			);
 			buildRules = (
 			);
@@ -316,7 +381,26 @@
 			);
 			name = UICircularProgressRing;
 			productName = UICircularProgressRing;
-			productReference = D38D894DEB90218054EEE1D4A1618386 /* UICircularProgressRing.framework */;
+			productReference = F11AA1588B14704F7EF9B76D1F54272D /* UICircularProgressRing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		507785ACAFA6EBFF477E83641A2F20B3 /* Pods-BLEController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51B0CBD00C30D0E793CA8BE129B9F085 /* Build configuration list for PBXNativeTarget "Pods-BLEController" */;
+			buildPhases = (
+				4989C523A80D76D72874C7F769300333 /* Sources */,
+				F5B3E93E3C0ABE9F7A65584EE26300C5 /* Frameworks */,
+				EDC6604C85D7FCACF1294A25B494BE40 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70FFD7D7024E1089081B1AB7337D1CA /* PBXTargetDependency */,
+				2AAE2F3C719DAAC56F4340FC84288C07 /* PBXTargetDependency */,
+			);
+			name = "Pods-BLEController";
+			productName = "Pods-BLEController";
+			productReference = 7326BA3EE94D9D548A2BF9471BA9A132 /* Pods_BLEController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		53FA4B3ACC3C04F2A6383ECE22B47D00 /* Pods-BLEControllerTests */ = {
@@ -333,25 +417,7 @@
 			);
 			name = "Pods-BLEControllerTests";
 			productName = "Pods-BLEControllerTests";
-			productReference = 5E9927D5BB8F70D635FB753BCC0EC4CF /* Pods_BLEControllerTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5BFC74CAE99F71C7C42A698D056FB2C9 /* Pods-BLEController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3BC7864AC5FE1E7E556A1C8A60C8A2AA /* Build configuration list for PBXNativeTarget "Pods-BLEController" */;
-			buildPhases = (
-				409EBF483C0D6DF33B4423C588343CD1 /* Sources */,
-				B6F7702F47F1B2D73D943EA3086F5A44 /* Frameworks */,
-				CA9D4FAC035F5B5A7F1A55B4685B84DE /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BBB03AF9C64FA1D74DFB1A9B2A1816C /* PBXTargetDependency */,
-			);
-			name = "Pods-BLEController";
-			productName = "Pods-BLEController";
-			productReference = 6C7C5FAB1E7F2CB160D355915E90FCCE /* Pods_BLEController.framework */;
+			productReference = 25D4E79CDAA74835E891807A4517A1D7 /* Pods_BLEControllerTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8E62B8F9C32DFAFB396BCEEFB6A78029 /* Pods-BLEControllerUITests */ = {
@@ -368,7 +434,24 @@
 			);
 			name = "Pods-BLEControllerUITests";
 			productName = "Pods-BLEControllerUITests";
-			productReference = 401621016290368E84ACB30F97BA347B /* Pods_BLEControllerUITests.framework */;
+			productReference = 977740F9E7BF062761A9BD67DF4F3676 /* Pods_BLEControllerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F2C93681D48B78F75D7C3C827BDE86CF /* Toast-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E0C86447395BBE01B6651027258FA7B /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
+			buildPhases = (
+				C59DB56942B83E4588DACF11F1F136A4 /* Sources */,
+				928AD2A770AC9ADCAFC2036DBAA3C15D /* Frameworks */,
+				B57A0326F6B594DD35E3C562455124BC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toast-Swift";
+			productName = "Toast-Swift";
+			productReference = 79AA804ACAB3C10F3BC1C50989AD4367 /* Toast_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -388,37 +471,38 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 1A2BBCF3667679EC31B2BD5A692BE390 /* Products */;
+			productRefGroup = 1AF0CAE7FC0B4D9304B34BE876C2CBCB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BFC74CAE99F71C7C42A698D056FB2C9 /* Pods-BLEController */,
+				507785ACAFA6EBFF477E83641A2F20B3 /* Pods-BLEController */,
 				53FA4B3ACC3C04F2A6383ECE22B47D00 /* Pods-BLEControllerTests */,
 				8E62B8F9C32DFAFB396BCEEFB6A78029 /* Pods-BLEControllerUITests */,
-				1A01FECEF46019CCD92DE9CDBB799910 /* UICircularProgressRing */,
+				F2C93681D48B78F75D7C3C827BDE86CF /* Toast-Swift */,
+				0BA104A866B96D7BF1253A979FDE7C3D /* UICircularProgressRing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		409EBF483C0D6DF33B4423C588343CD1 /* Sources */ = {
+		4154B0D73A6833928FE4ED9A3F9DF099 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				346726523B50CE4F0854E0D7593F2C48 /* Pods-BLEController-dummy.m in Sources */,
+				49A8F92A96207410850454B93BAC3B69 /* UICircularProgressRing-dummy.m in Sources */,
+				8FC213B137E020841BE9467CA14C383F /* UICircularProgressRingDelegate.swift in Sources */,
+				424F0965ACACE7C8A6F18C67D9D50F16 /* UICircularProgressRingGradientPosition.swift in Sources */,
+				1AC9C02AADCA21238570ECA11AFD0387 /* UICircularProgressRingLayer.swift in Sources */,
+				3384547913A04EAB45F15F080B74C962 /* UICircularProgressRingStyle.swift in Sources */,
+				C2407B969621927066DD6A1AAD58F70B /* UICircularProgressRingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		43E7D7B6F2BD09BC38BC96419BC96A35 /* Sources */ = {
+		4989C523A80D76D72874C7F769300333 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8F28601E3F55D4517E668CD74E4F085 /* UICircularProgressRing-dummy.m in Sources */,
-				0312EDDDAA14B20122B256DD39B48B72 /* UICircularProgressRingDelegate.swift in Sources */,
-				06E1EDF26D7E0551D29D269BC7C438B2 /* UICircularProgressRingGradientPosition.swift in Sources */,
-				950ED5166D052BD85FAC07AE54718803 /* UICircularProgressRingLayer.swift in Sources */,
-				D0AAFD87692696BB3950D93DBC7ADC79 /* UICircularProgressRingStyle.swift in Sources */,
-				23273319B3CE7815AB96FC9AE2836F68 /* UICircularProgressRingView.swift in Sources */,
+				E9E659AD23867EC73D9FC58ABE1D4B81 /* Pods-BLEController-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,57 +522,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C59DB56942B83E4588DACF11F1F136A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE1AE0C40DB3378C324515313C79B27 /* Toast-Swift-dummy.m in Sources */,
+				90F12E2B77E19B44C094EE2F6FA8C06F /* Toast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0BBB03AF9C64FA1D74DFB1A9B2A1816C /* PBXTargetDependency */ = {
+		2AAE2F3C719DAAC56F4340FC84288C07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UICircularProgressRing;
-			target = 1A01FECEF46019CCD92DE9CDBB799910 /* UICircularProgressRing */;
-			targetProxy = F7201C6BCB440B1E966D8862A00DEF71 /* PBXContainerItemProxy */;
+			target = 0BA104A866B96D7BF1253A979FDE7C3D /* UICircularProgressRing */;
+			targetProxy = 9786B9DD97E9058421262A73B041ED03 /* PBXContainerItemProxy */;
+		};
+		F70FFD7D7024E1089081B1AB7337D1CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Toast-Swift";
+			target = F2C93681D48B78F75D7C3C827BDE86CF /* Toast-Swift */;
+			targetProxy = FDCF05D5AF00DA739E0506384B912CD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2DB8A2933B02A8F4E5043C29A5FE229D /* Release */ = {
+		04F37A73538D2BDBB5CD788C80BE98C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 276A919CE33A91FDE8B364F04CADC476 /* Pods-BLEControllerTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BLEControllerTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BLEControllerTests/Pods-BLEControllerTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BLEControllerTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3697E92488D910F9925EF589D62575A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D34DA3BA2F47570492F9456227B39C83 /* Pods-BLEControllerUITests.debug.xcconfig */;
+			baseConfigurationReference = EE2054DBE4B216A0DBFAEF2E2448A401 /* Toast-Swift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -502,13 +565,48 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		05C26C7229EA639FB597FD5BF450F18F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA23210A0D2866DAD54E090DC1A44333 /* Pods-BLEControllerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-BLEControllerUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLEControllerUITests/Pods-BLEControllerUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -520,83 +618,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		757E404C576188AF3811A69148F41480 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2230DE04A863D017C79ECF2C349EF0E /* Pods-BLEController.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BLEController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BLEController/Pods-BLEController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BLEController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7ACD3E9C85BC620D29F3CE3FD5DACF04 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 988DD7311149195D6B2644816AD9B38E /* UICircularProgressRing.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UICircularProgressRing/UICircularProgressRing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UICircularProgressRing/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = UICircularProgressRing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
 			name = Release;
 		};
-		8CEB68F6DE78D39C68DE55D62738769A /* Debug */ = {
+		22B82F6406F2800437D89020A1B10BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C71F307D306F20EF1A5E63115345DCB9 /* Pods-BLEControllerTests.debug.xcconfig */;
 			buildSettings = {
@@ -614,7 +638,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-BLEControllerTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLEControllerTests/Pods-BLEControllerTests.modulemap";
@@ -632,9 +656,9 @@
 			};
 			name = Debug;
 		};
-		919D9C11DF981EC6FED19ED2E9736D1E /* Debug */ = {
+		49F9D051BD160DC91CB467F933AAFABD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 988DD7311149195D6B2644816AD9B38E /* UICircularProgressRing.xcconfig */;
+			baseConfigurationReference = 4E1C319DD83958FB6649D9F198FCA1B0 /* UICircularProgressRing.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -667,7 +691,113 @@
 			};
 			name = Debug;
 		};
-		9369C5A9E999B3D92B939CE509420E92 /* Release */ = {
+		55B6264BA23E832CE805F61885D75800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE2054DBE4B216A0DBFAEF2E2448A401 /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59130A8E103A387E657A64268EFEEDB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 276A919CE33A91FDE8B364F04CADC476 /* Pods-BLEControllerTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BLEControllerTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BLEControllerTests/Pods-BLEControllerTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BLEControllerTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7242969B652102AA09BB284DC44C24FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E1C319DD83958FB6649D9F198FCA1B0 /* UICircularProgressRing.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UICircularProgressRing/UICircularProgressRing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UICircularProgressRing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UICircularProgressRing/UICircularProgressRing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = UICircularProgressRing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		86BC0B3D18FD3E1F4304A2DD38F82FC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2E26DE7EA213865D31B9218E6E200B4 /* Pods-BLEController.release.xcconfig */;
 			buildSettings = {
@@ -685,7 +815,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-BLEController/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLEController/Pods-BLEController.modulemap";
@@ -705,7 +835,7 @@
 			};
 			name = Release;
 		};
-		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
+		9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -745,7 +875,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -754,16 +884,55 @@
 			};
 			name = Debug;
 		};
-		9A67AFBA23E9EB11E568394B57D47963 /* Release */ = {
+		A2629864E58C3978A0D2404CCCF5C93B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA23210A0D2866DAD54E090DC1A44333 /* Pods-BLEControllerUITests.release.xcconfig */;
+			baseConfigurationReference = A2230DE04A863D017C79ECF2C349EF0E /* Pods-BLEController.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BLEController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BLEController/Pods-BLEController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BLEController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B409B24EAC6932AB8B47B26918E2B91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34DA3BA2F47570492F9456227B39C83 /* Pods-BLEControllerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -772,11 +941,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-BLEControllerUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLEControllerUITests/Pods-BLEControllerUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -788,9 +957,9 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -826,7 +995,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -840,17 +1009,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97803B46811A9BDB5E70FA1303AFBFFE /* Debug */,
-				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
+				9BFC9E4A7AAD7A607ACE06D95A401A5A /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BC7864AC5FE1E7E556A1C8A60C8A2AA /* Build configuration list for PBXNativeTarget "Pods-BLEController" */ = {
+		51B0CBD00C30D0E793CA8BE129B9F085 /* Build configuration list for PBXNativeTarget "Pods-BLEController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				757E404C576188AF3811A69148F41480 /* Debug */,
-				9369C5A9E999B3D92B939CE509420E92 /* Release */,
+				A2629864E58C3978A0D2404CCCF5C93B /* Debug */,
+				86BC0B3D18FD3E1F4304A2DD38F82FC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E0C86447395BBE01B6651027258FA7B /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04F37A73538D2BDBB5CD788C80BE98C3 /* Debug */,
+				55B6264BA23E832CE805F61885D75800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7273951487610CDAF1A1D9F8F618221C /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F9D051BD160DC91CB467F933AAFABD /* Debug */,
+				7242969B652102AA09BB284DC44C24FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -858,17 +1045,8 @@
 		894CD713CB81610A9F839A72C966DF0B /* Build configuration list for PBXNativeTarget "Pods-BLEControllerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8CEB68F6DE78D39C68DE55D62738769A /* Debug */,
-				2DB8A2933B02A8F4E5043C29A5FE229D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DF8584C1C616B3878CF26131AB22435B /* Build configuration list for PBXNativeTarget "UICircularProgressRing" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				919D9C11DF981EC6FED19ED2E9736D1E /* Debug */,
-				7ACD3E9C85BC620D29F3CE3FD5DACF04 /* Release */,
+				22B82F6406F2800437D89020A1B10BCD /* Debug */,
+				59130A8E103A387E657A64268EFEEDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -876,8 +1054,8 @@
 		FFC3602893B15189B284E51C35985F61 /* Build configuration list for PBXNativeTarget "Pods-BLEControllerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3697E92488D910F9925EF589D62575A1 /* Debug */,
-				9A67AFBA23E9EB11E568394B57D47963 /* Release */,
+				B409B24EAC6932AB8B47B26918E2B91B /* Debug */,
+				05C26C7229EA639FB597FD5BF450F18F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
