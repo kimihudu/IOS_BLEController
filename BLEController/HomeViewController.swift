@@ -14,12 +14,18 @@ import Toast_Swift
 
 var container = [String:String]()
 let ulti = Ultilities.init()
+var dataHistory = [[String:Any]]()
 
 class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate  {
 
     var manager:CBCentralManager!
     var BLEBand:CBPeripheral!
     var locationServ:LocationServices!
+    var tabBarProfile: UITabBarItem!
+    var tabBarActivities: UITabBarItem!
+    var tabBarHistory: UITabBarItem!
+
+    
     var actData = ["device":"",
                    "dateTime":"",
                    "steps":"0",
@@ -77,14 +83,17 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     
     @IBAction func btnGo2Device(_ sender: Any) {
+        guard container.count > 0 else { return }
         self.tabBarController?.selectedIndex = 1
     }
     
     @IBAction func btnGo2Steps(_ sender: Any) {
+        guard container.count > 0 else { return }
         self.tabBarController?.selectedIndex = 2
     }
     
     @IBAction func btnGo2HR(_ sender: Any) {
+        guard container.count > 0 else { return }
         self.tabBarController?.selectedIndex = 2
     }
     
@@ -128,6 +137,8 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         manager = CBCentralManager(delegate: self, queue: nil)
         locationServ = LocationServices()
         locationServ.getLocation()
+        toggleTabbar(false)
+        
         
     }
     
@@ -338,6 +349,7 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         /*waiting for sync data*/
         if flag{
+            
             saveAct(data: actData)
             ulti.hideActivityIndicator(uiView: self.view)
             ulti.output(description: "completed get data", data: actData as AnyObject)
@@ -347,6 +359,9 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
             self.view.makeToast("Today is \(_date)", duration: 3.0, position: .center)
             self.view.makeToast("you're in \(_location)", duration: 3.0, position: .center)
             self.view.makeToast("Completed sync data from your device", duration: 3.0, position: .center)
+            toggleTabbar(true)
+            
+            dataHistory = getAct(dataName: "HistoryAct")
             
             
         }
@@ -381,7 +396,8 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
 
         ulti.showActivityIndicator(uiView: view)
         
-        view.makeToast("Sync device", duration: 3.0, position: .top)
+        self.view.makeToast("Sync device", duration: 3.0, position: .top)
+        
         
         if(BLEBand != nil) {
             manager.cancelPeripheralConnection(BLEBand)
@@ -436,9 +452,12 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     }
     
     /*Retrieving Data*/
-    func getAct(dataName: String) -> [[String:String]]{
+    func getAct(dataName: String) -> [[String:Any]]{
         
-        var historyData = [[String:String]]()
+        
+        
+        
+        var historyData = [[String:Any]]()
         var dailyData = [String:String]()
         
         // Obtaining data from model
@@ -462,7 +481,9 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
                     dailyData["cal"] = String(describing: result.value(forKey: "cal")!)
                     dailyData["hr"] = String(describing: result.value(forKey: "hr")!)
                     
-                    historyData.append(dailyData)
+
+                    historyData.append(["Date":dailyData["dateTime"]!,"listAct":dailyData])
+                    
                     
                 }
                 
@@ -471,8 +492,24 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         } catch {
             print("Error")
         }
-        ulti.output(description: "get history data", data: historyData as AnyObject)
+        ulti.output(description: "get history data from db", data: historyData as AnyObject)
         return historyData
         
+    }
+    
+    /*toggle tabbar*/
+    func toggleTabbar(_ data: Bool){
+        
+        let tabBarControllerItems = self.tabBarController?.tabBar.items
+        
+        if let tabArray = tabBarControllerItems {
+            tabBarProfile = tabArray[1]
+            tabBarActivities = tabArray[2]
+            tabBarHistory = tabArray[3]
+            
+            tabBarProfile.isEnabled = data
+            tabBarActivities.isEnabled = data
+            tabBarHistory.title = ""
+        }
     }
 }

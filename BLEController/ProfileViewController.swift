@@ -21,8 +21,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        ulti.output(description: "[profile]actData", data: container as AnyObject)
-//        displayInfo(container)
+        ulti.output(description: "[profile]actData", data: container as AnyObject)
+        displayInfo(container)
 
         // Do any additional setup after loading the view.
     }
@@ -47,8 +47,6 @@ class ProfileViewController: UIViewController {
         
         if (data.count < 0)  { return }
         
-        print(data["serial"]!)
-        
         txtDeviceSerial.text =  String(describing: data["serial"]!)
         txtDeviceName.text =  String(describing: data["device"]!)
         txtDeviceFW.text =  String(describing: data["fw"]!)
@@ -59,14 +57,7 @@ class ProfileViewController: UIViewController {
         
         
         
-        
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let backItem = UIBarButtonItem()
-        backItem.title = "Back"
-        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
-    }
 
 }

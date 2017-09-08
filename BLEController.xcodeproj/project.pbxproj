@@ -14,6 +14,7 @@
 		B013624D1F6046E6008BFE35 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B013624C1F6046E6008BFE35 /* LocationService.swift */; };
 		B013624F1F605002008BFE35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B013624E1F605002008BFE35 /* CoreLocation.framework */; };
 		B01362511F61ABC5008BFE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01362501F61ABC5008BFE35 /* Main.storyboard */; };
+		B01362531F625C8C008BFE35 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01362521F625C8C008BFE35 /* HistoryViewController.swift */; };
 		B0246BFF1F5CC68C0083BED9 /* test.storyboard__ in Resources */ = {isa = PBXBuildFile; fileRef = B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */; };
 		B03FE7C01F5340FC003BD332 /* String+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */; };
 		B03FE7C21F534275003BD332 /* Data+HexJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7C11F534275003BD332 /* Data+HexJoin.swift */; };
@@ -68,6 +69,7 @@
 		B013624C1F6046E6008BFE35 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		B013624E1F605002008BFE35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B01362501F61ABC5008BFE35 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B01362521F625C8C008BFE35 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.storyboard__; sourceTree = "<group>"; };
 		B03D8D8BE5680E4166DA1188 /* Pods-BLEControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEControllerTests/Pods-BLEControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+HexConverter.swift"; path = "Extensions/String+HexConverter.swift"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				B03FE7C71F57009E003BD332 /* HomeViewController.swift */,
 				B03FE7C91F5700DD003BD332 /* ActivityViewController.swift */,
 				B03FE7CB1F5700FE003BD332 /* ProfileViewController.swift */,
+				B01362521F625C8C008BFE35 /* HistoryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				B0B4628B1F584E0300776554 /* Ultilities.swift in Sources */,
 				B0EC9FBB1F4E815300237326 /* ViewController.swift_ in Sources */,
 				B0EC9FB91F4E815300237326 /* AppDelegate.swift in Sources */,
+				B01362531F625C8C008BFE35 /* HistoryViewController.swift in Sources */,
 				B0B462871F584DAB00776554 /* BatteryInfo.swift in Sources */,
 				B0B462831F5845AD00776554 /* StepsInfo.swift in Sources */,
 				B03FE7CC1F5700FE003BD332 /* ProfileViewController.swift in Sources */,

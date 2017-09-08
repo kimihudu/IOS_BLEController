@@ -10,27 +10,42 @@ import UIKit
 import UICircularProgressRing
 
 class ActivityViewController: UIViewController,UICircularProgressRingDelegate {
+    
 
     @IBOutlet weak var ringHR: UICircularProgressRingView!
     @IBOutlet weak var ringSteps: UICircularProgressRingView!
     @IBOutlet weak var ringDist: UICircularProgressRingView!
     @IBOutlet weak var ringCal: UICircularProgressRingView!
     
+    @IBAction func btnShowHistory(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 3
+    }
+    @IBAction func btnGo2HRHistory(_ sender: Any) {
+    }
+    @IBAction func btnGo2StepsHistory(_ sender: Any) {
+    }
+    @IBAction func btnGo2DistHistory(_ sender: Any) {
+    }
+    @IBAction func btnGo2CalHistory(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        ulti.output(description: "[Activities]actData", data: container as AnyObject)
-//        
-//        // Customize some properties
-//        ringHR.animationStyle = kCAMediaTimingFunctionLinear
-//        
-//        // Set the delegate
-//        ringHR.delegate = self
-//        ringSteps.delegate = self
-//        ringCal.delegate = self
-//        ringDist.delegate = self
-//        
-//        animateRing(container)
+        ulti.output(description: "[Activities]actData", data: container as AnyObject)
+        ulti.output(description: "[Activities]dataHistory", data: dataHistory as AnyObject)
+        
+        // Customize some properties
+        ringHR.animationStyle = kCAMediaTimingFunctionLinear
+        
+        // Set the delegate
+        ringHR.delegate = self
+        ringSteps.delegate = self
+        ringCal.delegate = self
+        ringDist.delegate = self
+        
+        animateRing(container)
+        
 
     }
 
