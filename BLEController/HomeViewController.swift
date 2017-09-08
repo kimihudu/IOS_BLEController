@@ -19,12 +19,13 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
 
     var manager:CBCentralManager!
     var BLEBand:CBPeripheral!
+    var locationServ:LocationServices!
     var actData = ["device":"",
                    "dateTime":"",
-                   "steps":"",
-                   "dist":"",
-                   "cal":"",
-                   "hr":""]
+                   "steps":"0",
+                   "dist":"0",
+                   "cal":"0",
+                   "hr":"0"]
     
     
     
@@ -76,17 +77,20 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     
     @IBAction func btnGo2Device(_ sender: Any) {
-        performSegue(withIdentifier: "go2Device", sender: self)
+        self.tabBarController?.selectedIndex = 1
     }
     
     @IBAction func btnGo2Steps(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 2
     }
     
     @IBAction func btnGo2HR(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 2
     }
     
     @IBAction func btnConnect(_ sender: Any) {
         discoverDevices(self.view)
+//        self.view.makeToast("test", duration: 3.0, position: .top)
     }
     
     @IBAction func btnRefresh(_ sender: Any) {
@@ -122,7 +126,14 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         // Do any additional setup after loading the view, typically from a nib.
         //        instant manager
         manager = CBCentralManager(delegate: self, queue: nil)
+        locationServ = LocationServices()
+        locationServ.getLocation()
+        
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        _ = self.tabBarController?.selectedIndex = 1
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -219,8 +230,9 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
 //                peripheral.setNotifyValue(true, for: cc)
 //                peripheral.readValue(for: cc)
                 
-                if(cc.uuid.uuidString == strUUID_SERVICE_HEART_RATE){
+                if(cc.uuid.uuidString == strUUID_SERVICE_HR_CHARACTERISTIC_MUASEMENT){
                     peripheral.setNotifyValue(true, for: cc)
+                    peripheral.readValue(for: cc)
                 }else{
                     peripheral.readValue(for: cc)
                 }
@@ -301,7 +313,10 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
             
         case strUUID_SERVICE_DEVICE_INFO_CHARACTERISTIC_HW:
             
-            guard characteristic.value != nil else {return}
+            guard let data = characteristic.value else {return}
+            ulti.output(description: "get device hw", data: data as AnyObject)
+            let hw = ulti.hexStr2Ascci(String(describing: data as AnyObject))
+            actData["hw"] = hw
             
         case strUUID_SERVICE_DEVICE_INFO_CHARACTERISTIC_FW:
             
@@ -325,8 +340,15 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         if flag{
             saveAct(data: actData)
             ulti.hideActivityIndicator(uiView: self.view)
-            self.view.makeToast("Sync Data completed",duration: 3.0, position: .bottom)
             ulti.output(description: "completed get data", data: actData as AnyObject)
+            
+            let _date = ulti.date2String(date: Date(), dateFormat: "dd.MM.yyyy HH:mm")
+            let _location = locationServ.returnLocation
+            self.view.makeToast("Today is \(_date)", duration: 3.0, position: .center)
+            self.view.makeToast("you're in \(_location)", duration: 3.0, position: .center)
+            self.view.makeToast("Completed sync data from your device", duration: 3.0, position: .center)
+            
+            
         }
         
         //        saveAct(data: actData)
@@ -353,12 +375,13 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
     
     
     
-    func discoverDevices(_ uiView:UIView) {
+    func discoverDevices(_ view:UIView) {
         
 //        manager = CBCentralManager(delegate: self, queue: nil)
-        if uiView != nil{
-            ulti.showActivityIndicator(uiView: uiView)
-        }
+
+        ulti.showActivityIndicator(uiView: view)
+        
+        view.makeToast("Sync device", duration: 3.0, position: .top)
         
         if(BLEBand != nil) {
             manager.cancelPeripheralConnection(BLEBand)
@@ -405,7 +428,7 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         
         do {
             try context.save()
-            print("saved")
+            print("data saved")
         }
         catch{
             print("There was an error in saving data")
@@ -448,7 +471,7 @@ class HomeViewController: UIViewController, CBCentralManagerDelegate, CBPeripher
         } catch {
             print("Error")
         }
-        ulti.output(description: "history data", data: historyData as AnyObject)
+        ulti.output(description: "get history data", data: historyData as AnyObject)
         return historyData
         
     }

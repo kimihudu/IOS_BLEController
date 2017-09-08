@@ -10,8 +10,10 @@
 		4F278A5AE22F28E4E873408A /* Pods_BLEController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CF6F21BF3C07823880B34F /* Pods_BLEController.framework */; };
 		77E2A8AB68C6D115B7ABB4AA /* Pods_BLEControllerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F32DAB3E6A62E098B11EB7 /* Pods_BLEControllerTests.framework */; };
 		B004D0321F5C2E9F007BBBDE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004D0311F5C2E9F007BBBDE /* TestViewController.swift */; };
-		B004D0381F5C4189007BBBDE /* test.storyboard_ in Resources */ = {isa = PBXBuildFile; fileRef = B004D0371F5C4189007BBBDE /* test.storyboard_ */; };
-		B01EB1451F5E840600ED516C /* CustActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01EB1441F5E840600ED516C /* CustActivityIndicator.swift */; };
+		B004D0381F5C4189007BBBDE /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B004D0371F5C4189007BBBDE /* test.storyboard */; };
+		B013624D1F6046E6008BFE35 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B013624C1F6046E6008BFE35 /* LocationService.swift */; };
+		B013624F1F605002008BFE35 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B013624E1F605002008BFE35 /* CoreLocation.framework */; };
+		B01362511F61ABC5008BFE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01362501F61ABC5008BFE35 /* Main.storyboard */; };
 		B0246BFF1F5CC68C0083BED9 /* test.storyboard__ in Resources */ = {isa = PBXBuildFile; fileRef = B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */; };
 		B03FE7C01F5340FC003BD332 /* String+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */; };
 		B03FE7C21F534275003BD332 /* Data+HexJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03FE7C11F534275003BD332 /* Data+HexJoin.swift */; };
@@ -34,7 +36,7 @@
 		B0EC9FC31F4E815300237326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EC9FC11F4E815300237326 /* LaunchScreen.storyboard */; };
 		B0EC9FCE1F4E815300237326 /* BLEControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FCD1F4E815300237326 /* BLEControllerTests.swift */; };
 		B0EC9FD91F4E815300237326 /* BLEControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EC9FD81F4E815300237326 /* BLEControllerUITests.swift */; };
-		B0F54DEB1F5D029E0068241A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F54DEA1F5D029E0068241A /* Main.storyboard */; };
+		B0F54DEB1F5D029E0068241A /* _Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0F54DEA1F5D029E0068241A /* _Main.storyboard */; };
 		B861C4F89CF1E461068E9998 /* Pods_BLEControllerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F3288D65F7F9CEFBC7AA31 /* Pods_BLEControllerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +64,10 @@
 		423325CA1D482B90B02DC458 /* Pods-BLEControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEControllerUITests/Pods-BLEControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		507FC46CEB49A3E499409D4E /* Pods-BLEController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEController.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLEController/Pods-BLEController.release.xcconfig"; sourceTree = "<group>"; };
 		B004D0311F5C2E9F007BBBDE /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = BLEController/TestViewController.swift; sourceTree = "<group>"; };
-		B004D0371F5C4189007BBBDE /* test.storyboard_ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.storyboard_; sourceTree = "<group>"; };
-		B01EB1441F5E840600ED516C /* CustActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustActivityIndicator.swift; sourceTree = "<group>"; };
+		B004D0371F5C4189007BBBDE /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		B013624C1F6046E6008BFE35 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		B013624E1F605002008BFE35 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B01362501F61ABC5008BFE35 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.storyboard__; sourceTree = "<group>"; };
 		B03D8D8BE5680E4166DA1188 /* Pods-BLEControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEControllerTests/Pods-BLEControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B03FE7BF1F5340FC003BD332 /* String+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+HexConverter.swift"; path = "Extensions/String+HexConverter.swift"; sourceTree = "<group>"; };
@@ -93,7 +97,7 @@
 		B0EC9FD41F4E815300237326 /* BLEControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0EC9FD81F4E815300237326 /* BLEControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEControllerUITests.swift; sourceTree = "<group>"; };
 		B0EC9FDA1F4E815300237326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0F54DEA1F5D029E0068241A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B0F54DEA1F5D029E0068241A /* _Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = _Main.storyboard; sourceTree = "<group>"; };
 		C2F32DAB3E6A62E098B11EB7 /* Pods_BLEControllerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEControllerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5E74A3D612130D6340A0B1 /* Pods-BLEControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLEControllerUITests/Pods-BLEControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F2CF6F21BF3C07823880B34F /* Pods_BLEController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B013624F1F605002008BFE35 /* CoreLocation.framework in Frameworks */,
 				B0B462811F58437E00776554 /* CoreData.framework in Frameworks */,
 				4F278A5AE22F28E4E873408A /* Pods_BLEController.framework in Frameworks */,
 			);
@@ -133,7 +138,7 @@
 			children = (
 				B03FE7C51F56F4C0003BD332 /* test_Main_ipad.storyboard */,
 				B004D0311F5C2E9F007BBBDE /* TestViewController.swift */,
-				B004D0371F5C4189007BBBDE /* test.storyboard_ */,
+				B004D0371F5C4189007BBBDE /* test.storyboard */,
 				B0246BFE1F5CC68C0083BED9 /* test.storyboard__ */,
 			);
 			name = DumpTest;
@@ -147,6 +152,7 @@
 				B0B462841F5845DF00776554 /* DeviceInfo.swift */,
 				B0B462861F584DAB00776554 /* BatteryInfo.swift */,
 				B0B462881F584DDA00776554 /* HeartRate.swift */,
+				B013624C1F6046E6008BFE35 /* LocationService.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -156,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				B0B4628A1F584E0300776554 /* Ultilities.swift */,
-				B01EB1441F5E840600ED516C /* CustActivityIndicator.swift */,
 			);
 			name = Ultis;
 			path = ..;
@@ -184,6 +189,7 @@
 		B0B4627F1F58437E00776554 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B013624E1F605002008BFE35 /* CoreLocation.framework */,
 				B0B462801F58437E00776554 /* CoreData.framework */,
 				F2CF6F21BF3C07823880B34F /* Pods_BLEController.framework */,
 				C2F32DAB3E6A62E098B11EB7 /* Pods_BLEControllerTests.framework */,
@@ -220,7 +226,8 @@
 				B0F54DED1F5D054B0068241A /* Views */,
 				B0F54DEC1F5D05300068241A /* Controllers */,
 				B0EC9FB81F4E815300237326 /* AppDelegate.swift */,
-				B0F54DEA1F5D029E0068241A /* Main.storyboard */,
+				B01362501F61ABC5008BFE35 /* Main.storyboard */,
+				B0F54DEA1F5D029E0068241A /* _Main.storyboard */,
 				B0EC9FBC1F4E815300237326 /* Main.storyboard_ */,
 				B0EC9FBF1F4E815300237326 /* Assets.xcassets */,
 				B0EC9FC11F4E815300237326 /* LaunchScreen.storyboard */,
@@ -406,9 +413,10 @@
 				B03FE7C61F56F4C0003BD332 /* test_Main_ipad.storyboard in Resources */,
 				B0EC9FC31F4E815300237326 /* LaunchScreen.storyboard in Resources */,
 				B0EC9FC01F4E815300237326 /* Assets.xcassets in Resources */,
-				B0F54DEB1F5D029E0068241A /* Main.storyboard in Resources */,
+				B0F54DEB1F5D029E0068241A /* _Main.storyboard in Resources */,
 				B0EC9FBE1F4E815300237326 /* Main.storyboard_ in Resources */,
-				B004D0381F5C4189007BBBDE /* test.storyboard_ in Resources */,
+				B004D0381F5C4189007BBBDE /* test.storyboard in Resources */,
+				B01362511F61ABC5008BFE35 /* Main.storyboard in Resources */,
 				B03FE7C41F56F194003BD332 /* Main.storyboard_ in Resources */,
 				B0246BFF1F5CC68C0083BED9 /* test.storyboard__ in Resources */,
 			);
@@ -594,10 +602,10 @@
 				B0B4628B1F584E0300776554 /* Ultilities.swift in Sources */,
 				B0EC9FBB1F4E815300237326 /* ViewController.swift_ in Sources */,
 				B0EC9FB91F4E815300237326 /* AppDelegate.swift in Sources */,
-				B01EB1451F5E840600ED516C /* CustActivityIndicator.swift in Sources */,
 				B0B462871F584DAB00776554 /* BatteryInfo.swift in Sources */,
 				B0B462831F5845AD00776554 /* StepsInfo.swift in Sources */,
 				B03FE7CC1F5700FE003BD332 /* ProfileViewController.swift in Sources */,
+				B013624D1F6046E6008BFE35 /* LocationService.swift in Sources */,
 				B03FE7C01F5340FC003BD332 /* String+HexConverter.swift in Sources */,
 				B03FE7C21F534275003BD332 /* Data+HexJoin.swift in Sources */,
 				B0B462891F584DDA00776554 /* HeartRate.swift in Sources */,

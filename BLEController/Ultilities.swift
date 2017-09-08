@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class Ultilities{
     
@@ -105,6 +106,7 @@ class Ultilities{
      @param uiView - add activity indicator to this view
      */
     func showActivityIndicator(uiView: UIView) {
+        
         container.frame = uiView.frame
         container.center = uiView.center
         container.backgroundColor = UIColorFromHex(rgbValue: 0xffffff, alpha: 0.3)
@@ -117,10 +119,7 @@ class Ultilities{
         
         activityIndicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0)
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
-        //        let tmp1 = loadingView.frame.size.width / 2
-        //        let tmp2 = loadingView.frame.size.height / 2
-        //        activityIndicator.center = CGRectMake(0.0,0.0 ,0.0,0.0)
-        
+        activityIndicator.center = CGPoint(x: loadingView.frame.size.width / 2, y: loadingView.frame.size.width / 2)
         loadingView.addSubview(activityIndicator)
         container.addSubview(loadingView)
         uiView.addSubview(container)
@@ -159,6 +158,43 @@ class Ultilities{
     //// In order to hide the activity indicator, call the function from your view controller
     //// ViewControllerUtils().hideActivityIndicator(self.view)
     
+    /* get placemark from location*/
+    func getPlacemark(forLocation location: CLLocation, completionHandler: @escaping (CLPlacemark?, String?) -> ()) {
+        let geocoder = CLGeocoder()
+        
+        geocoder.reverseGeocodeLocation(location, completionHandler: {
+            placemarks, error in
+            
+            if let err = error {
+                completionHandler(nil, err.localizedDescription)
+            } else if let placemarkArray = placemarks {
+                if let placemark = placemarkArray.first {
+                    completionHandler(placemark, nil)
+                } else {
+                    completionHandler(nil, "Placemark was nil")
+                }
+            } else {
+                completionHandler(nil, "Unknown error")
+            }
+        })
+        
+    }
+    
+    func displayLocationInfo(placemark: CLPlacemark) -> [String:String]{
+        
+        var currentPlace = [String:String]()
+        if placemark != nil {
+            //stop updating location to save battery life
+            
+//            currentPlace[]
+//            println(placemark. ? placemark.locality : "")
+//            println(placemark.postalCode ? placemark.postalCode : "")
+//            println(placemark.administrativeArea ? placemark.administrativeArea : "")
+//            println(placemark.country ? placemark.country : "")
+        }
+        return currentPlace
+    }
 
 
 }
+//

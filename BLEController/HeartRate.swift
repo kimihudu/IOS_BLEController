@@ -45,7 +45,7 @@ struct HeartRate{
 //            }
 //        }
         
-        self.hrMeasurement = Int(data[0])
+        self.hrMeasurement = Int(data[1])
         self.hrCtrlPoint = 0
         
         
